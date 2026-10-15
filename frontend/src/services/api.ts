@@ -5,9 +5,21 @@ import type {
   JobRole,
 } from '../types/career';
 
-// Dynamic API Base URL supporting VITE_API_BASE_URL (Render backend in production)
-// Defaults to '/api' for local development with Vite proxy.
-const rawBase = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || '/api';
+// Dynamic API Base URL resolution:
+// 1. If VITE_API_BASE_URL is provided (and not a placeholder like 'xxxx'), use it.
+// 2. In local development (import.meta.env.DEV), default to '/api' (Vite dev proxy).
+// 3. In production, default to the live Render backend: https://skillmatchai-1xrn.onrender.com
+const envUrl = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim();
+
+let rawBase: string;
+if (envUrl && !envUrl.includes('xxxx') && !envUrl.includes('example.com')) {
+  rawBase = envUrl;
+} else if (import.meta.env.DEV) {
+  rawBase = '/api';
+} else {
+  rawBase = 'https://skillmatchai-1xrn.onrender.com';
+}
+
 const cleanBase = rawBase.replace(/\/+$/, '');
 export const API_BASE = cleanBase.endsWith('/api') ? cleanBase : `${cleanBase}/api`;
 
