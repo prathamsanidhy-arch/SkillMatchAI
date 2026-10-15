@@ -5,7 +5,11 @@ import type {
   JobRole,
 } from '../types/career';
 
-const API_BASE = '/api';
+// Dynamic API Base URL supporting VITE_API_BASE_URL (Render backend in production)
+// Defaults to '/api' for local development with Vite proxy.
+const rawBase = (import.meta.env.VITE_API_BASE_URL as string | undefined)?.trim() || '/api';
+const cleanBase = rawBase.replace(/\/+$/, '');
+export const API_BASE = cleanBase.endsWith('/api') ? cleanBase : `${cleanBase}/api`;
 
 export class ApiError extends Error {
   status: number;
