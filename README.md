@@ -33,7 +33,7 @@ By providing clear, transparent criteria for what entry-level jobs require and o
 
 ## 3. Technology Stack
 
-- **Frontend**:
+- Frontend:
   - React 19 + TypeScript
   - Vite 8
   - Tailwind CSS v4
