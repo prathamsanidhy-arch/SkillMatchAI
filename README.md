@@ -14,10 +14,10 @@ Traditional job portals overwhelm students with conflicting job listings, inflat
 
 ### The Solution
 SkillMatch AI eliminates guesswork through **transparent deterministic benchmarks** and **personalised employability roadmaps**:
-1. **Capability Baseline**: Students enter their education, current technical competencies, and target interests without needing to sign up or share personal data.
-2. **Transparent Matching Engine**: Evaluates skills against 12 standardized entry-level career profiles with documented scoring weights (60% Required Skills, 20% Supplementary Skills, 15% Stated Interests, 5% Experience Level).
-3. **Skill Gap Diagnostics**: Accurately separates matched skills from missing critical prerequisites.
-4. **Actionable 5-Stage Roadmap**: Generates immediate tactical steps, missing skills to learn, practical applied projects, portfolio guidance, and interview preparation.
+1. Capability Baseline**: Students enter their education, current technical competencies, and target interests without needing to sign up or share personal data.
+2. Transparent Matching Engine**: Evaluates skills against 12 standardized entry-level career profiles with documented scoring weights (60% Required Skills, 20% Supplementary Skills, 15% Stated Interests, 5% Experience Level).
+3. Skill Gap Diagnostics**: Accurately separates matched skills from missing critical prerequisites.
+4. Actionable 5-Stage Roadmap**: Generates immediate tactical steps, missing skills to learn, practical applied projects, portfolio guidance, and interview preparation.
 5. **Dual Guidance Engine**: Operates in high-fidelity **Deterministic Demo Mode** by default and elevates to dynamic generative analysis when configured with the Google Gemini API.
 
 ---
